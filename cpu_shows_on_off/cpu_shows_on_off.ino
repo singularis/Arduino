@@ -150,12 +150,12 @@ void Serial_resive() {
   Serial.println(incomingByte, DEC);
   if (incomingByte <= 100 & incomingByte >= 0) {
     cpu_load=incomingByte;
-    Serial.print("cpu_load");
+    Serial.print("cpu_load ");
     Serial.println(cpu_load, DEC);
   }
-  if (incomingByte > 100  & incomingByte < 15000) {
+  if (incomingByte > 1000  & incomingByte < 15000) {
     free_ram=incomingByte;
-    Serial.print("free_ram");
+    Serial.print("free_ram ");
     Serial.println(free_ram, DEC);
   }
   } 
